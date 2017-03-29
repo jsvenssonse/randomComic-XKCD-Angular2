@@ -4,29 +4,31 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
+//Extra modules
+import { MaterialModule } from '@angular/material';
+import { UIRouterModule } from 'ui-router-ng2';
+import 'hammerjs';
+
 //Components
 import { AppComponent } from './app.component';
 import { Hello } from './components/helloComponent';
 import { About } from './components/aboutComponent';
+import { Comic } from './components/comicComponent';
+import { ComicRandom } from './components/randomComponent';
+import { BackComic } from './components/backComponent';
 
-//Extra modules
-import { MaterialModule } from '@angular/material';
-import { UIRouterModule } from 'ui-router-ng2';
+//Services
+import {ComicService} from './services/comicService'
 
 //Configs
 import { uiRouterConfigFn } from './configs/router.config';
-import { helloState, aboutState } from './configs/states';
+import { helloState, aboutState, comicState, randomcomicState, backcomicState } from './configs/states';
 
-//temp imports
-import { Component } from '@angular/core'; 
-
-
-
-let INITIAL_STATES =  [ helloState, aboutState ];
+let INITIAL_STATES =  [ helloState, aboutState, comicState, randomcomicState, backcomicState ];
 
 @NgModule({
   declarations: [
-    AppComponent,Hello,About
+    AppComponent, Hello, About, Comic, ComicRandom, BackComic,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ let INITIAL_STATES =  [ helloState, aboutState ];
     MaterialModule,
     UIRouterModule.forRoot({ states: INITIAL_STATES, useHash: true }),
   ],
-  providers: [],
+  providers: [ComicService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

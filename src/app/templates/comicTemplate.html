@@ -1,0 +1,31 @@
+
+<div class="main-comic">
+	<div *ngFor="let comic of data">
+		
+		<md-toolbar class="comic-bar"> 
+			<div class="left">
+				<a uiSref="backcomic" uiSrefActive="active"[uiParams]="{id : data[0].num }"><img src="assets/chevron-left.png" alt="" /></a>
+				
+			</div>
+			<div class="center">
+				{{ data[0].title }}
+			</div>
+			<div class="right">
+				<button md-button [mdMenuTriggerFor]="menu"><img src="assets/dots-vertical.png" alt="" /></button>
+				<md-menu #menu="mdMenu">
+					<button md-menu-item uiSref="randomcomic" uiSrefActive="active"[uiParams]="{id : data[0].num }">Random Comic</button>
+				</md-menu>
+			</div>
+
+		
+
+		</md-toolbar>
+		<!--<md-spinner></md-spinner>-->
+		<md-card>
+			<img src="{{ data[0].img }}" alt="">
+		</md-card>
+		
+
+	</div>
+</div>
+

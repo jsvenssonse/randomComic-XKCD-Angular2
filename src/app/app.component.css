@@ -1,0 +1,29 @@
+.main {
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+     margin-top: 1px;
+     height: 100%;
+}
+.main-comic {
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+     margin-top: -65px;
+     height: 100%;
+}
+.comic-bar{
+	background-color: #7986CB;
+}
+.right{
+	width: 20%;
+	text-align: right;
+}
+.center{
+	width: 60%;
+}
+
+.left{
+	width: 20%;
+	text-align: left;
+}
