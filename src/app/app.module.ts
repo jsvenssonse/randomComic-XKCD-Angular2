@@ -6,29 +6,23 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 //Components
 import { AppComponent } from './app.component';
+import { Hello } from './components/helloComponent';
+import { About } from './components/aboutComponent';
 
 //Extra modules
 import { MaterialModule } from '@angular/material';
-import { UIRouterModule } from "ui-router-ng2";
+import { UIRouterModule } from 'ui-router-ng2';
+
+//Configs
+import { uiRouterConfigFn } from './configs/router.config';
+import { helloState, aboutState } from './configs/states';
 
 //temp imports
 import { Component } from '@angular/core'; 
 
-@Component({  
-  template: '<h3>Hello world!</h3>' 
-})
-class Hello { }
 
-@Component({ 
-  template: '<h3>Its the UI-Router hello world app!</h3>' 
-})
-class About { }
 
-/** States */
-
-export let helloState = { name: 'hello', url: '/hello',  component: Hello }; 
-export let aboutState = { name: 'about', url: '/about',  component: About };
-
+let INITIAL_STATES =  [ helloState, aboutState ];
 
 @NgModule({
   declarations: [
@@ -39,7 +33,7 @@ export let aboutState = { name: 'about', url: '/about',  component: About };
     FormsModule,
     HttpModule,
     MaterialModule,
-    //UIRouterModule.forRoot({ states: [ helloState, aboutState ], useHash: true })
+    UIRouterModule.forRoot({ states: INITIAL_STATES, useHash: true }),
   ],
   providers: [],
   bootstrap: [AppComponent]
