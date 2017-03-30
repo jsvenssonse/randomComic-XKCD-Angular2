@@ -27,3 +27,28 @@
 	width: 20%;
 	text-align: left;
 }
+.sidenav{
+	min-width: 500px;
+}
+.menu-button{
+	padding: 10px;
+	margin-top: 5px;
+	width: 100%;
+	text-align: left;
+}
+.menu-pic{
+	width: 10%;
+	float: left;
+}
+.menu-text{
+	width: 90%;
+	float: right;
+	text-align: left;
+}
+.comic-toolbar{
+	margin-right: 0px;
+	margin-left: 0px;
+}
+md-spinner{
+	margin: 0 auto;
+}

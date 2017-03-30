@@ -5,6 +5,13 @@ import {ComicService} from './services/comicService'
 // Import RxJs methods
 import 'rxjs/add/operator/map';
 
+/*
+    -->     Component Information    <--
+    
+    * This is the main component for display
+
+*/
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

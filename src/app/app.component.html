@@ -1,25 +1,27 @@
-
-
-
-<md-sidenav-container class="example-container">
-<md-toolbar color="primary">
-	<div class="example-sidenav-content">
-		<button md-button (click)="sidenav.open()">
-			<img src="assets/view-sequential.png" alt="" />
-		</button>
-	</div>
-	
-</md-toolbar>
-	<md-sidenav #sidenav class="example-sidenav">
-	<button md-button uiSref="hello">Hello</button><br><hr>
-	<button md-button uiSref="about">About</button><br><hr>
-	<button md-button uiSref="comic">Comic</button><br><hr>
-</md-sidenav>
-<md-toolbar color="primary">
-</md-toolbar>
-
-<div class="main">
-<ui-view></ui-view>
-</div>
-
+<md-sidenav-container class="sidenav-container">
+	<md-toolbar color="primary">
+		<div class="sidenav-content">
+			<button md-button (click)="sidenav.open()">
+				<img src="assets/view-sequential.png" alt="" />
+			</button>
+		</div>
+		
+	</md-toolbar>
+		<md-sidenav #sidenav class="sidenav">
+			<md-toolbar> </md-toolbar>
+			<button md-button uiSref="hello" class="menu-button">
+				<div class="menu-pic"><img src="assets/home.png" alt="" /></div>
+				<div class="menu-text">HelloState</div>
+			</button>
+			<button md-button uiSref="about" class="menu-button">
+				<div class="menu-pic"><img src="assets/information.png" alt="" /></div>
+				<div class="menu-text">About</div>
+			</button>
+			<button md-button uiSref="comic" class="menu-button">
+				<div class="menu-pic"><img src="assets/newspaper.png" alt="" /></div>
+				<div class="menu-text">Comic</div>
+			</button>
+				<hr>
+	</md-sidenav>
+	<ui-view></ui-view>
 </md-sidenav-container>
