@@ -1,7 +1,19 @@
 # randomComic-XKCD-Angular2
 Angular2, UI-Router, Comic, XKCD.com
 
-## Working with: 
+
+
+## Installations
+```
+	npm install -g @angular/cli
+	git clone https://github.com/jsvenssonse/randomComic-XKCD-Angular2.git
+	npm install --save @angular/material
+	npm install --save hammerjs
+	npm update
+	# Check your package.json 
+```
+
+## Working with package.json: 
 ``` "dependencies": {
    "@angular/common": "^2.4.0",
    "@angular/compiler": "^2.4.0",
@@ -17,5 +29,5 @@ Angular2, UI-Router, Comic, XKCD.com
     "rxjs": "^5.1.0",
     "ui-router-ng2": "^1.0.0-beta.4",
     "zone.js": "^0.7.6"
-  },
+  },...........
   ```
