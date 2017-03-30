@@ -1,7 +1,7 @@
 # randomComic-XKCD-Angular2
 Angular2, UI-Router, Comic, XKCD.com
 
-Working with: 
+# Working with: 
 "dependencies": {
     "@angular/common": "^2.4.0",
     "@angular/compiler": "^2.4.0",
