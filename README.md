@@ -11,6 +11,9 @@ Angular2, UI-Router, Comic, XKCD.com
 	npm install --save hammerjs
 	npm update
 	# Check your package.json 
+
+	install chrome: https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?utm_source=chrome-ntp-icon
+
 ```
 
 ## Working with package.json: 
