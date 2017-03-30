@@ -1,7 +1,8 @@
 # randomComic-XKCD-Angular2
 Angular2, UI-Router, Comic, XKCD.com
 
-
+<img src="http://sejs.se/portfolio/pic/xkcd-Angular2/Angular_XKCD_random_new1.png" />
+<img src="http://sejs.se/portfolio/pic/xkcd-Angular2/Angular_XKCD_random_new2.png" />
 
 ## Installations
 ```
