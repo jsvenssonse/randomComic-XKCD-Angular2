@@ -1,5 +1,5 @@
 import { OnInit, Inject } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Jsonp } from '@angular/http';
 
 // Import RxJs methods
 import 'rxjs/add/operator/map';
@@ -12,12 +12,11 @@ import 'rxjs/add/operator/map';
 */
 
 export class ComicService {   
-	constructor(@Inject(Http) public http: Http) {  }
+    constructor(@Inject(Http) public http: Http) {  }
 	array=[];
 
 
-
-	getComic() {
+    getComic() {
         return this.http.get('http://xkcd.com/info.0.json')
         	.map(resp =>  resp.json());
     }
@@ -37,4 +36,5 @@ export class ComicService {
         return this.http.get('http://xkcd.com/' +id +'/info.0.json')
         	.map(resp =>  resp.json());
     }
+
 }
